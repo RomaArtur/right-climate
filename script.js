@@ -8,17 +8,17 @@ if (!searchButton || !cityInput || !weatherResult) {
     console.error("Erro ao buscar dados. Cidade não encontrada ou chave de API inválida.")
 }
 
-searchButton.addEventListener("click", (evento) => {
+searchButton.addEventListener("click", () => {
   const cityName = cityInput.value.trim(); 
 
   if (cityName) {
     getWeatherData(cityName);
   }
-
+})
   function getWeatherData(city) {
     weatherResult.innerHTML = "<p>Buscando...</p>";
 
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
 
     fetch(apiUrl)
       .then(response => {
@@ -53,5 +53,4 @@ searchButton.addEventListener("click", (evento) => {
 
     weatherResult.innerHTML = htmlContent;
   }
-
 
