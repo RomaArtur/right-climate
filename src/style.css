@@ -1,29 +1,19 @@
-/* ARQUIVO: style.css
-   Certifique-se que este arquivo está na mesma pasta que index.html
-*/
-
-/* DESIGN TOKENS & THEME */
 :root {
-  /* Imagens de Fundo */
   --bg-image-light: url('https://images.unsplash.com/photo-1621274403997-37aace184f49?q=80&w=1920&auto=format&fit=crop');
   --bg-image-dark: url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=1920&auto=format&fit=crop');
 
-  /* Variáveis Base */
   --bg-overlay-light: linear-gradient(135deg, rgba(137, 247, 254, 0.4) 0%, rgba(102, 166, 255, 0.4) 100%);
   --bg-overlay-dark: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 27, 75, 0.7) 100%);
   
-  /* Ultra-Glass Tokens */
   --glass-bg: rgba(255, 255, 255, 0.15);
   --glass-border: rgba(255, 255, 255, 0.3);
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
   --blur-strength: 40px;
   
-  /* Text Colors */
   --text-primary: #1e293b; 
   --text-secondary: #475569;
   --text-input: #1e293b; 
   
-  /* Input/Button Clean Style */
   --input-bg: rgba(255, 255, 255, 0.2);
   --input-border: rgba(255, 255, 255, 0.4);
   --button-bg: rgba(255, 255, 255, 0.25);
@@ -33,7 +23,6 @@
   --radius: 32px;
 }
 
-/* Dark Mode Override */
 body.dark-mode {
   --glass-bg: rgba(0, 0, 0, 0.25);
   --glass-border: rgba(255, 255, 255, 0.08);
@@ -67,11 +56,9 @@ body {
   overscroll-behavior: none;
   overflow: hidden; 
   color: var(--text-primary);
-  /* Transição suave apenas para cor de texto */
   transition: color 0.5s ease;
 }
 
-/* --- BACKGROUND OTIMIZADO --- */
 .bg-fixed {
   position: fixed;
   top: 0;
@@ -102,7 +89,6 @@ body.dark-mode .bg-fixed::after {
   opacity: 1;
 }
 
-/* WIDGET CONTAINER */
 .app-widget {
   position: relative;
   background: var(--glass-bg);
@@ -120,7 +106,6 @@ body.dark-mode .bg-fixed::after {
   transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -158,7 +143,6 @@ header h1 {
   transform: rotate(15deg) scale(1.05);
 }
 
-/* Search Area */
 .search-box {
   display: flex;
   align-items: center;
@@ -236,7 +220,6 @@ input[type="text"]::placeholder {
   transform: scale(0.95);
 }
 
-/* Weather Content Area */
 .weather-result {
   height: 320px; 
   display: flex;
@@ -317,7 +300,6 @@ input[type="text"]::placeholder {
   transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-/* Utilitários */
 .loading-spinner {
   border: 3px solid rgba(255,255,255,0.1);
   border-left-color: var(--text-primary);
